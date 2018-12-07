@@ -6,11 +6,11 @@ import java.util.ArrayList;
 public class TextFileInputStream {
 
   //создания массива строк из файла
-  static ArrayList<String> fileReadLineToArray(String Path)
+  static ArrayList<String> fileReadLineToArray(String path)
   {
     try {
       ArrayList arrayList = new ArrayList();
-      File f = new File(Path);
+      File f = new File(path);
       FileInputStream fis = new FileInputStream(f);
       BufferedReader br = new BufferedReader(new InputStreamReader(fis));
       String strLine;
@@ -37,28 +37,15 @@ public class TextFileInputStream {
           w.add(s.toLowerCase());
         }
       }
+    System.out.println("Count of word2 = " + w.size());
       return w;
   }
 
-    // подсчет колличества слов
-  static ArrayList<Integer> countWord (ArrayList<String> arr) {
-      ArrayList<Integer> cW = new ArrayList<>();
-      for (String s : arr) {
-        int count = 0;
-        for (String sub : arr) {
-          if (s.equals(sub)) count++;
-        }
-        cW.add(count);
-      }
-      return cW;
-  }static void result (ArrayList<String> wordList, ArrayList<Integer> countList){
+  //вывод теста из файла
+  static void fileOutput(ArrayList<String> array){
 
-    int size;
-    if (wordList.size() == countList.size()) {
-      size = wordList.size();
-      for (int i = 0; i < size; i++) {
-        System.out.println(wordList.get(i).toUpperCase() + " \tвстречается " + countList.get(i) + " раз;");
-      }
+    for (String line : array) {
+      System.out.println(line);
     }
   }
 
