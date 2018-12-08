@@ -3,7 +3,10 @@ package ua.org.oa.kraspu;
 import java.io.*;
 import java.util.ArrayList;
 
-public class TextFileInputStream {
+public class TextFileInputStream extends Processing {
+
+  static ArrayList<String> words = new ArrayList<>();
+  static ArrayList<Integer> counts = new ArrayList<>();
 
   //создания массива строк из файла
   static ArrayList<String> fileReadLineToArray(String path)
@@ -29,16 +32,15 @@ public class TextFileInputStream {
   }
 
   //создание массива слов из файла
-  static ArrayList<String> wordArr (ArrayList<String> arr) {
-      ArrayList<String> w = new ArrayList<>();
+  static void toWordArr (ArrayList<String> arr) {
+    words.clear();
+    counts.clear();
       for (String str : arr) {
         String[] result = str.split("(?U)\\W+");
         for (String s : result) {
-          w.add(s.toLowerCase());
+          addToArray(s.toLowerCase(), words, counts);
         }
       }
-    System.out.println("Count of word2 = " + w.size());
-      return w;
   }
 
   //вывод теста из файла

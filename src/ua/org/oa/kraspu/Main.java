@@ -14,41 +14,27 @@ public class Main {
     ArrayList<String> aL = TextFileInputStream.fileReadLineToArray(pathToFile);
 
     TextFileInputStream.fileOutput(aL); // вывод содержимого файла
-//    System.out.println("--------------------------------------------------------------------------");
 
+    TextFileInputStream.toWordArr(aL);
 
-//    ArrayList<String> wordArray = TextFileInputStream.wordArr(aL);
-//    ArrayList<Integer> countWord = Processing.countWord(wordArray);
-//    ArrayList<Boolean> repeated = Processing.repeatedWord(wordArray);
-//    Processing.result(wordArray, countWord, repeated);
+    // вывод результата!
+    // Добавлена возможность вывода только тех слов, которые встречаются 2 и более раза! (twiceAndMore = true)
+    Processing.result(TextFileInputStream.words, TextFileInputStream.counts, true);
+//    Processing.result(TextFileInputStream.words, TextFileInputStream.counts, false);
 
-//    System.out.println("===========================================================================");
 
     // 2-ой способ - переводим текст файла в массив слов
 
 //    TextFileReader.fileOut(pathToFile); //можно так вывести текст файла на экран
 
     String text = TextFileReader.textToArray(pathToFile);
-//    System.out.println(text); // а можно так вывести текст! и так проще
-////    System.out.println("\n");
-//    ArrayList<String> wordArr2 = TextFileReader.toWordArr(text);
-//    ArrayList<Integer> countWord2 = Processing.countWord(wordArr2);
-//    ArrayList<Boolean> repeated2 = Processing.repeatedWord(wordArr2);
+    System.out.println(text); // а можно и так вывести текст! и так проще
     TextFileReader.toWordArr(text);
-    Processing.result(TextFileReader.words, TextFileReader.counts, true);
 
-
-
-
-
-
-
-//    MyImpl my = new MyImpl("Hello my friend");
-//    int length = my.length();
-//    char c = my.charAt(2);
-//    System.out.println(length);
-//    System.out.println(c);
-
+    // вывод результата!
+    // Добавлена возможность вывода только тех слов, которые встречаются 2 и более раза! (twiceAndMore = true)
+//    Processing.result(TextFileReader.words, TextFileReader.counts, true);
+    Processing.result(TextFileReader.words, TextFileReader.counts, false);
 
 
   }

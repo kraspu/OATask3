@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class TextFileReader {
+public class TextFileReader extends Processing {
 
   static ArrayList<String> words = new ArrayList<>();
   static ArrayList<Integer> counts = new ArrayList<>();
@@ -53,20 +53,10 @@ public class TextFileReader {
     counts.clear();
     String[] result = arr.split("(?U)\\W+");
       for (String s : result) {
-        addToArray(s);
+        addToArray(s.toLowerCase(), words, counts);
       }
-    System.out.println("Count o words = " + words.size());
   }
 
-  static  void addToArray (String str){
-    int index = words.indexOf(str);
-    if (index < 0) {
-          words.add(str);
-          counts.add(1);
-      }else {
-        int count = counts.get(index);
-        counts.set(index, ++count);
-      }
-  }
+
 
 }
