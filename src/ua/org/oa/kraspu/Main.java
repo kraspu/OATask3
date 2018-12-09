@@ -19,8 +19,8 @@ public class Main {
 
     // вывод результата!
     // Добавлена возможность вывода только тех слов, которые встречаются 2 и более раза! (twiceAndMore = true)
-    Processing.result(TextFileInputStream.words, TextFileInputStream.counts, true);
-//    Processing.result(TextFileInputStream.words, TextFileInputStream.counts, false);
+//    Processing.result(TextFileInputStream.words, TextFileInputStream.counts, true);
+    Processing.result(TextFileInputStream.words, TextFileInputStream.counts, false);
 
 
     // 2-ой способ - переводим текст файла в массив слов
@@ -33,8 +33,8 @@ public class Main {
 
     // вывод результата!
     // Добавлена возможность вывода только тех слов, которые встречаются 2 и более раза! (twiceAndMore = true)
-//    Processing.result(TextFileReader.words, TextFileReader.counts, true);
-    Processing.result(TextFileReader.words, TextFileReader.counts, false);
+    Processing.result(TextFileReader.words, TextFileReader.counts, true);
+//    Processing.result(TextFileReader.words, TextFileReader.counts, false);
 
 
   }

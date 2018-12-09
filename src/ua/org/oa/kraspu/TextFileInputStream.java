@@ -36,7 +36,7 @@ public class TextFileInputStream extends Processing {
     words.clear();
     counts.clear();
       for (String str : arr) {
-        String[] result = str.split("(?U)\\W+");
+        String[] result = str.split("[^a-zA-ZА-Яа-яЁёіІїЇ]+");
         for (String s : result) {
           addToArray(s.toLowerCase(), words, counts);
         }
