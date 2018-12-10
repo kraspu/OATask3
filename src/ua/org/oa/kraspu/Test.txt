@@ -2,6 +2,7 @@
 Привет, меня зовут Паша! Я живу в Днепре. Мою жену зовут Танюша, а мою дочь зовут Софьюшка Павловна.
 Привіт, мене звати Павло! Я проживаю у Дніпрі. Мою дружину звати Танюша, а доньку звати Софійка Павлівна.
 Hello, my name is Pavlo! I live in Dnipro city. My wife's name is Tanyusha, and my daughter's name is Sofi.
+Hello, my name is Pavlo! I live in Dnipro city. My wife's name is Tanyusha, and my daughter's name is Sofi.
 
 Мое задание:
 

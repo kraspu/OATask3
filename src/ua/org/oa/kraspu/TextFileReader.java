@@ -51,7 +51,7 @@ public class TextFileReader extends Processing {
   static void toWordArr (String arr) {
     words.clear();
     counts.clear();
-    String[] result = arr.split("[^a-zA-ZА-Яа-яЁёіІїЇ]+");
+    String[] result = arr.split("[^a-zA-ZА-Яа-яЁёіІїЇ']+");
       for (String s : result) {
         addToArray(s.toLowerCase(), words, counts);
       }
